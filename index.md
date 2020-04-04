@@ -1,37 +1,169 @@
-## Welcome to GitHub Pages
+<!DOCTYPE HTML>
+<html>
 
-You can use the [editor on GitHub](https://github.com/srs4040/app.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+<head>
+  <title>APP</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine&amp;v1" />
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" />
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <h1>APP<a href="#">_101</a></h1>
+        <div class="slogan">Assignment</div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="current" in the li tag for the selected page - to highlight which page you're on -->
+          <li class="current"><a href="index.html">Home</a></li>
+          <li><a href="Examples next update.html">Examples</a></li>
+          <li><a href="page.html">A Page</a></li>
+          <li><a href="another_page.html">Another Page</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div id="sidebar_container">
+        <img class="paperclip" src="paperclip.jpeg" alt="paperclip" />
+        <div class="sidebar">
+        <!-- insert your sidebar items here -->
+        <h3>Updates</h3>
+        <h4>What's the update?</h4>
+        <p>Check latest updates here<br /><a href="#">Read more</a></p>
+        </div>
+        <img class="paperclip" src="paperclip.jpeg" alt="paperclip" />
+        <div class="sidebar">
+          <h3>Newsletter</h3>
+          <p>if you want to know more, please do not enter your email address and click 'Subscribe'.</p>
+          <form method="post" action="#" id="subscribe">
+            <p style="padding: 0 0 9px 0;"><input class="search" type="text" name="email_address" value="Don't do it" onclick="javascript: document.forms['subscribe'].email_address.value=''" /></p>
+            <p><input class="subscribe" name="subscribe" type="submit" value="Subscribe" /></p>
+          </form>
+        </div>
+      </div>
+      <div id="content">
+        <!-- insert the page content here -->
+        <h1>Welcome to Assignment site</h1>
+        <h2>15 programing paradigm</h2>
 
-### Markdown
+        <h2>Procedural:</h2>
+        <p>Procedural programming is a programming paradigm, derived from structured programming, based on the concept of the procedure call. Procedures, also known as routines, subroutines, or functions, simply contain a series of computational steps to be carried out. Any given procedure might be called at any point during a program's execution, including by other procedures or itself. The first major procedural programming languages appeared 1957‚1964, including Fortran, ALGOL, COBOL, PL/I and BASIC.</p>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+        <h2>Object Oriented:</h2>
+        <p>Object-oriented programming (OOP) is a programming paradigm based on the concept of "objects", which can contain data, in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods). A feature of objects is an object's procedures that can access and often modify the data fields of the object with which they are associated (objects have a notion of "this" or "self"). In OOP, computer programs are designed by making them out of objects that interact with one another.OOP languages are diverse, but the most popular ones are class-based, meaning that objects are instances of classes, which also determine their types.Many of the most widely used programming languages (such as C++, Java, Python, etc.) are multi-paradigm and they support object-oriented programming to a greater or lesser degree, typically in combination with imperative, procedural programming. Significant object-oriented languages include Java, C++, C#, Python, PHP, JavaScript, Ruby, Perl, Object Pascal, Objective-C, Dart, Swift, Scala, Common Lisp, MATLAB, and Smalltalk.
+        </p>
 
-```markdown
-Syntax highlighted code block
+        <h2>Logical:</h2>
+        <p>Logic programming is a programming paradigm which is largely based on formal logic. Any program written in a logic programming language is a set of sentences in logical form, expressing facts and rules about some problem domain. Major logic programming language families include Prolog, answer set programming (ASP) and Datalog. In all of these languages, rules are written in the form of clauses:
 
-# Header 1
-## Header 2
-### Header 3
+H :
+and are read declaratively as logical implications:
+H is called the head of the rule and B1, ..., Bn is called the body. Facts are rules that have no body, and are written in the simplified form:
 
-- Bulleted
-- List
+H.
+In the simplest case in which H, B1, ..., Bn are all atomic formulae, these clauses are called definite clauses or Horn clauses. However, there are many extensions of this simple case, the most important one being the case in which conditions in the body of a clause can also be negations of atomic formulas. Logic programming languages that include this extension have the knowledge representation capabilities of a non-monotonic logic.
 
-1. Numbered
-2. List
+In ASP and Datalog, logic programs have only a declarative reading, and their execution is performed by means of a proof procedure or model generator whose behaviour is not meant to be controlled by the programmer. However, in the Prolog family of languages, logic programs also have a procedural interpretation as goal-reduction procedures:
 
-**Bold** and _Italic_ and `Code` text
+to solve H, solve B1, and ... and solve Bn.
+Consider the following clause as an example:
 
-[Link](url) and ![Image](src)
-```
+fallible(X) :- human(X).
+based on an example used by Terry Winograd[1] to illustrate the programming language Planner. As a clause in a logic program, it can be used both as a procedure to test whether X is fallible by testing whether X is human, and as a procedure to find an X which is fallible by finding an X which is human. Even facts have a procedural interpretation. For example, the clause:
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+human(socrates).
+can be used both as a procedure to show that socrates is human, and as a procedure to find an X that is human by "assigning" socrates to X.
 
-### Jekyll Themes
+The declarative reading of logic programs can be used by a programmer to verify their correctness. Moreover, logic-based program transformation techniques can also be used to transform logic programs into logically equivalent programs that are more efficient. In the Prolog family of logic programming languages, the programmer can also use the known problem-solving behaviour of the execution mechanism to improve the efficiency of programs.</p>
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/srs4040/app.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+<h2>Strucured:</h2>
+<p>Structured Programming Approach, as the word suggests, can be defined as a programming approach in which the program is made as a single structure. It means that the code will execute the instruction by instruction one after the other. It doesnâ€™t support the possibility of jumping from one instruction to some other with the help of any statement like GOTO, etc. Therefore, the instructions in this approach will be executed in a serial and structured manner. The languages that support Structured programming approach are:
 
-### Support or Contact
+C
+C++
+Java
+C#
+..etc
+On the contrary, in the Assembly languages like Microprocessor 8085, etc, the statements do not get executed in a structured manner. It allows jump statements like GOTO. So the program flow might be random.
+</p>
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+<h2>Event Driven:</h2>
+<p>Event-driven programming focuses on events. Eventually, the flow of program depends upon events. Until now, we were dealing with either sequential or parallel execution model but the model having the concept of event-driven programming is called asynchronous model. Event-driven programming depends upon an event loop that is always listening for the new incoming events. The working of event-driven programming is dependent upon events. Once an event loops, then events decide what to execute and in what order.</p>
+<p>  Event-loop is a functionality to handle all the events in a computational code. It acts round the way during the execution of whole program and keeps track of the incoming and execution of events. The Asyncio module allows a single event loop per process. Followings are some methods provided by Asyncio module to manage an event loop</p>
+<ul>
+<li>loop = get_event_loop()  This method will provide the event loop for the current context.</li>
+
+<li>loop.call_later(time_delay,callback,argument)  This method arranges for the callback that is to be called after the given time_delay seconds.</li>
+
+<li>loop.call_soon(callback,argument) This method arranges for a callback that is to be called as soon as possible. The callback is called after call_soon() returns and when the control returns to the event loop.<li>
+
+<li>loop.time()  This method is used to return the current time according to the event loopâ€™s internal clock.</li>
+
+<li>asyncio.set_event_loop()  This method will set the event loop for the current context to the loop.</li>
+
+<li>asyncio.new_event_loop()  This method will create and return a new event loop object.</li>
+
+<li>loop.run_forever() This method will run until stop() method is called.</li>
+</ul>
+
+<h2>Imperative:</h2>
+<p>It is one of the oldest programming paradigm. It features close relation relation to machine architecture. It is based on Von Neumann architecture. It works by changing the program state through assignment statements. It performs step by step task by changing state. The main focus is on how to achieve the goal. The paradigm consist of several statements and after execution of all the result is stored.Imperative programming is divided into three broad categories: Procedural, OOP and parallel processing.<p>
+
+<h2>Declarative:</h2>
+<p>It is divided as Logic, Functional, Database. In computer science the declarative programming is a style of building programs that expresses logic of computation without talking about its control flow. It often considers programs as theories of some logic.It may simplify writing parallel programs. The focus is on what needs to be done rather how it should be done basically emphasize on what code code is actually doing. It just declare the result we want rather how it has be produced. This is the only difference between imperative (how to do) and declarative (what to do) programming paradigms. Getting into deeper we would see logic, functional and database.
+
+<h2>Parallel:<h2>
+  <p>Parallel processing is the processing of program instructions by dividing them among multiple processors. A parallel processing system posses many numbers of processor with the objective of running a program in less time by dividing them. This approach seems to be like divide and conquer. Examples are NESL (one of the oldest one) and C/C++ also supports because of some library function.</p>
+
+<h2>Functional:</h2>
+<p>The functional programming paradigms has its roots in mathematics and it is language independent. The key principal of this paradigms is the execution of series of mathematical functions. The central model for the abstraction is the function which are meant for some specific computation and not the data structure. Data are loosely coupled to functions.The function hide their implementation. Function can be replaced with their values without changing the meaning of the program. Some of the languages like perl, javascript mostly uses this paradigm.</p>
+
+<h2>Concurrent:</h2>
+<p>Concurrency in Detail</p>
+<p>Concurrency is when two tasks overlap in execution. It could be a situation where an application is progressing on more than one task at the same time. We can understand it diagrammatically; multiple tasks are making progress at the same time, as follows âˆ’</p>
+  <p>Levels of Concurrency</p>
+<p>In this section, we will discuss the three important levels of concurrency in terms of programming âˆ’
+
+<p>Low-Level Concurrency</p>
+<p>In this level of concurrency, there is explicit use of atomic operations. We cannot use such kind of concurrency for application building, as it is very error-prone and difficult to debug. Even Python does not support such kind of concurrency.</p>
+
+<p>Mid-Level Concurrency</p>
+<p>In this concurrency, there is no use of explicit atomic operations. It uses the explicit locks. Python and other programming languages support such kind of concurrency. Mostly application programmers use this concurrency.</p>
+
+<p>High-Level Concurrency</p>
+<p>In this concurrency, neither explicit atomic operations nor explicit locks are used. Python has concurrent.futures module to support such kind of concurrency.</p>
+
+<h2>Networking:</h2>
+<p>As pythonâ€™s versatility as a programming language grown over the years, we find that python is very suitable in the world of network programming too. With growth in cloud computing , network programming has become even a more hot topic and python has a big role to play. Below are the few important reasons for pythonâ€™s use as a preferred language for network Programming.</p>
+<p>Socket programming<p>
+<p>Sockets are the links through which the client and servers communicate with each other. For example when a browser is opened a socket is automatically created to connect with the server. Python has a socket module which an be used to implement various socket functionalities like binding an address or starting a listener port. Socket programming is fundamental to computer networking and python handles it well.</p>
+<p>Web Scrapping</p>
+<p>One of the important reasons python became famous is the its dominance among the languages used for scrapping the web. Its data structure and network access abilities makes it ideal for visiting webpages and download their data automatically. And if there is some API connectivity available for the target website, then python will handle it even more easily through its program structures.</p>
+  <p>Web Frame works</p>
+  <p>Web Frame works makes application development easy and fast by offering pre-defined structures and modularity. The developer has to do minimal coding to leverage those existing libraries and customize a little to achieve the goal. Django and Flask are two famous ones which have seen much commercial use even though they are opensource.</p>
+
+<h2>Symbolic:</h2>
+<p>In computer programming, symbolic programming is a programming paradigm in which the program can manipulate its own formulas and program components as if they were plain data.Through symbolic programming, complex processes can be developed that build other more intricate processes by combining smaller units of logic or functionality. Thus, such programs can effectively modify themselves and appear to "learn", which makes them better suited for applications such as artificial intelligence, expert systems, natural language processing, and computer games.Languages that support symbolic programming include homoiconic languages such as Wolfram Language,LISP and Prolog.</p>
+
+<h2>Automata:</h2>
+<p>Automata-based programming is a programming paradigm in which the program or part of it is thought of as a model of a finite-state machine (FSM) or any other (often more complicated) formal automaton (see automata theory). Sometimes a potentially infinite set of possible states is introduced, and such a set can have a complicated structure, not just an enumeration.Finite-state machine-based programming is generally the same, but, formally speaking, does not cover all possible variants, as FSM stands for finite-state machine, and automata-based programming does not necessarily employ FSMs in the strict sense.
+The following properties are key indicators for automata-based programming:</p>
+<ul>
+  <li>The time period of the program's execution is clearly separated down to the automaton steps. Each step is effectively an execution of a code section (same for all the steps) which has a single entry point. That section might be divided down to subsections to be executed depending on different states, although this is not necessary.</li>
+  <li>Any communication between the automaton steps is only possible via the explicitly noted set of variables named the automaton state. Between any two steps, the program cannot have implicit components of its state, such as local variables' values, return addresses, the current instruction pointer, etc. That is, the state of the whole program, taken at any two moments of entering an automaton step, can only differ in the values of the variables being considered as the automaton state.</li>
+</ul>
+
+<h2>Graphical or visual:</h2>
+<p>In computing, a visual programming language (VPL) is any programming language that lets users create programs by manipulating program elements graphically rather than by specifying them textually.[1][2] A VPL allows programming with visual expressions, spatial arrangements of text and graphic symbols, used either as elements of syntax or secondary notation. For example, many VPLs (known as dataflow or diagrammatic programming)[3] are based on the idea of "boxes and arrows", where boxes or other screen objects are treated as entities, connected by arrows, lines or arcs which represent relations.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
